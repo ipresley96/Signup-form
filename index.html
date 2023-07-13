@@ -15,9 +15,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="flex">
-  
-  <section class="container flex">
-    <!-- Sign-up form start -->
+
+   <section class="container flex column">
+    
+     <div class=" column-top column-right">
+      <img class="hero-img" src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+    </div>
+    
       <div class="column-left column-bottom flex column">
         <h1> Stay updated! </h1>
         <p class="metrics">
@@ -25,16 +29,16 @@
         </p> 
       <div class="list-container flex column">
         <div class="flex list-item">
-          <img src="./assets/images/icon-list.svg" class="list" alt="">
-          <p class="">Product discovery and building what matters</p>
+          <img class="list-check-img" src="./assets/images/icon-list.svg"  alt="">
+          <p class="feature">Product discovery and building what matters</p>
         </div>
         <div class="flex list-item">
-          <img src="./assets/images/icon-list.svg" class="list" alt="">
-          <p class="hook">Measuring to ensure updates are a success</p>
+          <img class="list-check-img" src="./assets/images/icon-list.svg"  alt="">
+          <p class="feature">Measuring to ensure updates are a success</p>
         </div>
         <div class="flex list-item">
-          <img src="./assets/images/icon-list.svg" class="list" alt="">
-          <p class="hook">And much more!</p>
+          <img class="list-check-img" src="./assets/images/icon-list.svg"  alt="">
+          <p class="feature">And much more!</p>
         </div>
       </div>
       <form class="flex column" action="">
@@ -42,28 +46,27 @@
           <label for="Email"> Email address </label>
           <p class="error-message hidden">Valid email required</p>
         </div>
-        <!-- failed attempt -->
-        <input id="input-form" type="text" placeholder="email@company.com"> 
+    
+
+        <input id="input-form" class="form-input" type="text" placeholder="email@company.com"> 
         <button class="btn"> Subscribe to monthly newsletter </button>
       </form>
       </div>
-    <!-- Sign-up form end -->
-    <!-- Form Image -->
-    <div class=" column-top column-right">
-      <img class="hero-img" src="./assets/images/illustration-sign-up-desktop.svg" alt="">
-    </div>
-  </section>
 
-  <!-- Make a model that appears after successful submission -->
+   
+  </section> 
+
+
+
   <!-- Success message start -->
-  <section class="modal hidden">
-    <img src="./assets/images/icon-success.svg" alt="">
-  <h1>Thanks for subscribing! </h1>
-
-  <p> A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.</p>
-
-  <button id="dismiss" class="btn">Dismiss message</button>
+  <section class="modal flex column hidden">
+    <div class="flex column">
+      <img src="./assets/images/icon-success.svg" alt="">
+      <h1>Thanks for subscribing! </h1>
+      <p> A confirmation email has been sent to ash@loremcompany.com. 
+      Please open it and click the button inside to confirm your subscription.</p>
+    </div>
+    <button id="dismiss" class="btn">Dismiss message</button>
   </section>
 
   <script src="main.js"></script>

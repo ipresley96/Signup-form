@@ -7,7 +7,7 @@ const modal = document.querySelector(".modal")
 const emailSubmission = (e) => {
     e.preventDefault() 
 
-    const inputFormValue = inputForm.value
+    let inputFormValue = inputForm.value
     const emailRegex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm");
     const isValidEmail = emailRegex.test(inputFormValue);
 
@@ -19,6 +19,8 @@ const emailSubmission = (e) => {
         toggleModal()
         console.log("Modal open")
     }
+
+    inputFormValue = inputForm[placeholder]
     console.log(isValidEmail)
 }
 

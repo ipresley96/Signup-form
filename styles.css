@@ -8,7 +8,7 @@
     --tomato: hsl(4, 100%, 67%);
     --dark-slate-grey: hsl(234, 29%, 20%);
     --charcoal: hsl(231, 7%, 60%);
-    --white: hsl(0, 0, 100%);
+    --white: #fff;
 }
 
 /* Reset Styles */
@@ -35,7 +35,19 @@
     display: none;
 }
 
+.btn{
+    padding: .9rem;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    border-radius: .5rem;
+    border: none;
+}
 
+.btn:hover{
+    background: linear-gradient(90deg, );
+}
+
+/* Tag Styling */
 body{
     height: 100vh;
     font-family: var(--primary-font);
@@ -45,51 +57,74 @@ body{
     align-items: center;
 }
 
-.container{
-    justify-content: center;
-    gap: 6%;
-    height: 60vh;
-    background-color: var(--white);
-}
-/* left bottom */
-.column-left{
-    justify-content: center;
-}
-
 h1{
     font-size: 40px;
     font-weight: var(--bold-font-weight);
     margin-bottom: 10px;
 }
 
-.list-container {
-    width: 100%;
-    margin: 10px 0;
-    gap: 10px;
-}
 
-.list-item{
-    gap:2%;
-    align-items: center;
-}
+/* Custom Classes */
 
-.column-right{
+.container{
     height: 100%;
+    background-color: var(--white);
+}
+
+
+/* left bottom */
+
+.column-top{
+    margin-top: 0;
 }
 
 .hero-img{
-   
-    width: 100%;
-    height: 100%;
     display: block;
     margin: 0 auto;
 }
 
-/* Error States */
+.column-bottom{
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+}
+
+.list-container {
+    width: 100%;
+    margin: 10px 0;
+    gap: 1rem;
+}
+
+.list-item{
+    gap: 5px;
+    align-items: center;
+}
+
+.list-check-img{
+    align-self: flex-start;
+}
+
+
+/* Form stylings */
+
+form{
+    width: 100%;
+    gap: .5rem;
+}
 
 .form-header{
     justify-content: space-between;
 }
+
+.form-input {
+    padding: .7rem;
+    border-radius: .5rem;
+    border: 1px solid var(--charcoal);
+}
+
+
+
+/* Error States */
 
 .error-message{
     color: var(--tomato);
@@ -101,4 +136,39 @@ h1{
 
 .error::placeholder{
     color: var(--tomato)
+}
+
+/* Success Modal */
+
+.modal{
+    background-color: #fff;
+    bottom: 0;
+    position: absolute;
+    height: 100%;
+    padding: 2rem;
+    transition: all 2000ms ease-in;
+}
+
+.modal.hidden{
+    bottom: 1000px;
+}
+
+
+
+.modal div:nth-child(1){
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-grow: 2;
+}
+
+.modal div p{
+    line-height: 1.6;
+}
+
+#dismiss{
+    font-size: 1.2rem;
+    padding: 1.1rem;
+    width: 100%;
+    align-self: baseline;
 }
