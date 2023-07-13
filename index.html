@@ -7,46 +7,65 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-  <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
+<body class="flex">
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <section class="container flex">
+    <!-- Sign-up form start -->
+      <div class="column-left column-bottom flex column">
+        <h1> Stay updated! </h1>
+        <p class="metrics">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p> 
+      <div class="list-container flex column">
+        <div class="flex list-item">
+          <img src="./assets/images/icon-list.svg" class="list" alt="">
+          <p class="">Product discovery and building what matters</p>
+        </div>
+        <div class="flex list-item">
+          <img src="./assets/images/icon-list.svg" class="list" alt="">
+          <p class="hook">Measuring to ensure updates are a success</p>
+        </div>
+        <div class="flex list-item">
+          <img src="./assets/images/icon-list.svg" class="list" alt="">
+          <p class="hook">And much more!</p>
+        </div>
+      </div>
+      <form class="flex column" action="">
+        <div class="flex form-header">
+          <label for="Email"> Email address </label>
+          <p class="error-message hidden">Valid email required</p>
+        </div>
+        <!-- failed attempt -->
+        <input id="input-form" type="text" placeholder="email@company.com"> 
+        <button class="btn"> Subscribe to monthly newsletter </button>
+      </form>
+      </div>
+    <!-- Sign-up form end -->
+    <!-- Form Image -->
+    <div class=" column-top column-right">
+      <img class="hero-img" src="./assets/images/illustration-sign-up-desktop.svg" alt="">
+    </div>
+  </section>
+
+  <!-- Make a model that appears after successful submission -->
+  <!-- Success message start -->
+  <section class="modal hidden">
+    <img src="./assets/images/icon-success.svg" alt="">
+  <h1>Thanks for subscribing! </h1>
+
+  <p> A confirmation email has been sent to ash@loremcompany.com. 
+  Please open it and click the button inside to confirm your subscription.</p>
+
+  <button id="dismiss" class="btn">Dismiss message</button>
+  </section>
+
+  <script src="main.js"></script>
 </body>
 </html>

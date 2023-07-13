@@ -1,0 +1,104 @@
+/* Variables */
+:root{
+    --paragraph-font-size: 16px;
+    --primary-font: 'Roboto', sans-serif;
+    --default-font-weight: 400;
+    --bold-font-weight: 700;
+
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal: hsl(231, 7%, 60%);
+    --white: hsl(0, 0, 100%);
+}
+
+/* Reset Styles */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  
+  }
+
+/* utlity classes */
+
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.hidden{
+    display: none;
+}
+
+
+body{
+    height: 100vh;
+    font-family: var(--primary-font);
+    font-weight: var(--default-font-weight);
+    font-size: var(--paragraph-font-size);
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    justify-content: center;
+    gap: 6%;
+    height: 60vh;
+    background-color: var(--white);
+}
+/* left bottom */
+.column-left{
+    justify-content: center;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: var(--bold-font-weight);
+    margin-bottom: 10px;
+}
+
+.list-container {
+    width: 100%;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.list-item{
+    gap:2%;
+    align-items: center;
+}
+
+.column-right{
+    height: 100%;
+}
+
+.hero-img{
+   
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Error States */
+
+.form-header{
+    justify-content: space-between;
+}
+
+.error-message{
+    color: var(--tomato);
+}
+.error{
+    background-color:hsl(4, 100%, 67%, .5);
+    border: 1px solid var(--tomato);
+}
+
+.error::placeholder{
+    color: var(--tomato)
+}
