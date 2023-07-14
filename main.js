@@ -20,13 +20,14 @@ const emailSubmission = (e) => {
         console.log("Modal open")
     }
 
-    inputFormValue = inputForm[placeholder]
+    inputFormValue = inputForm['type = placeholder']
     console.log(isValidEmail)
 }
 
 // toggle modal
 
 const toggleModal = () => {
+    document.querySelector(".container").classList.toggle("hidden")
     modal.classList.toggle("hidden")
 }
 

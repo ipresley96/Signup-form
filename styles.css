@@ -36,6 +36,7 @@
 }
 
 .btn{
+    font-size: 1rem;
     padding: .9rem;
     background-color: var(--dark-slate-grey);
     color: var(--white);
@@ -76,6 +77,10 @@ h1{
 
 .column-top{
     margin-top: 0;
+}
+
+.column-right{
+    display: none;
 }
 
 .hero-img{
@@ -146,7 +151,7 @@ form{
     position: absolute;
     height: 100%;
     padding: 2rem;
-    transition: all 2000ms ease-in;
+    transition: bottom 2000ms ease-in;
 }
 
 .modal.hidden{
@@ -167,8 +172,47 @@ form{
 }
 
 #dismiss{
-    font-size: 1.2rem;
+    
     padding: 1.1rem;
     width: 100%;
     align-self: baseline;
 }
+
+@media (min-width: 800px)  {
+    /* … */
+
+    body{
+        background-color: var(--dark-slate-grey);
+    }
+    .container{
+        height: fit-content;
+        padding: 1.5rem;
+        background-color: #fff;
+        border-radius: 1.5rem;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        }
+    
+
+    .column-top{
+        display: none;
+    }
+
+    .column-right{
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .modal{
+        gap: 1rem;
+        bottom: auto;
+        padding: 3rem;
+        width: 30%;
+        height: fit-content;
+        border-radius: 4rem;
+    }
+
+
+  }
