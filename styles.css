@@ -42,10 +42,11 @@
     color: var(--white);
     border-radius: .5rem;
     border: none;
+    transition:  background .9000s ease;
 }
 
 .btn:hover{
-    background: linear-gradient(90deg, );
+    background: linear-gradient(45deg, #f96878, #f97944);
 }
 
 /* Tag Styling */
